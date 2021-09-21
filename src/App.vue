@@ -1,19 +1,22 @@
 <template>
-  <div id="app">{{ a }}</div>
+  <div id="app">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
 export default {
   data () {
     return {
-      a: 'hah'
+      
     }
   }
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
   #app {
-    font-size: 20px;
+    width: 100vw;
+    min-height: 100vh;
   }
 </style>

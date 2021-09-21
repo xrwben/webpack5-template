@@ -5,9 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <script>
+        // 适配方案 
+        (function(window, document){
+          function setRem() {
+            let deviceWidth = document.documentElement.clientWidth;
+            deviceWidth = deviceWidth > 680 ? 680 : deviceWidth;
+            document.documentElement.style.fontSize = deviceWidth / 6.8 + "px";
+          }
+          setRem();
+          window.addEventListener("resize", setRem);
+          window.addEventListener('pageshow', function (e) {
+            if (e.persisted) {
+              setRem();
+            }
+          })
+        })(window, document)
+    </script>
 </head>
 <body>
-    <div id="app">123</div>
+    <div id="app"></div>
     <!-- inject -->
 </body>
 </html>

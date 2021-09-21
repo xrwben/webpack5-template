@@ -34,7 +34,7 @@ module.exports = {
         },
         parser: {
           dataUrlCondition: {
-            maxSize: 10 * 1024 // 4kb 小于则打包为base64
+            maxSize: 10 * 1024 // 10kb 小于则打包为base64
           }
         }
       },
@@ -55,5 +55,8 @@ module.exports = {
   ],
   resolve: {
     extensions: ['.js', '.json', '.vue'],
+    alias: {
+      '@src': path.resolve(__dirname, '../src/')
+    }
   },
 }

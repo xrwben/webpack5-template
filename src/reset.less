@@ -1,11 +1,83 @@
 * {
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
 }
-#app {
-    width: 100vw;
-    height: 100vh;
-    color: red;
-    display: flex;
-    background: url("../asserts/edg.png?q=1") no-repeat left top / 100%;
+body,
+dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+pre, code, form, fieldset, legend, input, textarea,
+p, blockquote, th, td, hr, button,
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
+body {
+    height: 100%;
+    font-size: 14px;
+    font-family: PingFangSC, Helvetica, sans-serif;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+}
+a {
+    text-decoration: none;
+}
+i, em {
+    font-style: normal;
+}
+img {
+    display: block;
+}
+li {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// input {
+//   border: none;
+//   appearance: none;
+//   border-radius: 0;
+//   outline: medium;
+//   background-color: transparent;
+
+//   &[type=number] {
+//     -moz-appearance: textfield;
+//   }
+
+//   &[type=number]::-webkit-inner-spin-button,
+//   &[type=number]::-webkit-outer-spin-button {
+//     -webkit-appearance: none;
+//     margin: 0;
+//   }
+// }
+
+/** 清除浮动 **/
+.clearfix:after {
+    content:"";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both; 
+ }
+.clearfix {
+    *zoom: 1;
+}
+/** 单行超出省略 **/
+.txt-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/** 多行超出省略 **/
+// .txt-of-num(@num) {
+//     display: flex;
+//     overflow: hidden;
+//     white-space: normal;
+//     text-overflow: ellipsis;
+//     word-wrap: break-word;
+//     -webkit-line-clamp: @num;
+//     -webkit-box-orient: vertical;
+// }
