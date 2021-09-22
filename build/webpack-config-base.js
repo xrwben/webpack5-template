@@ -46,7 +46,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: '腾讯新员工入职培训',
+      title: '新员工入职培训',
       template: path.resolve(__dirname, '../index.html'),
       inject: 'body',
       minify: false

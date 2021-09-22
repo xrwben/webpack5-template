@@ -29,6 +29,7 @@
 import Banner from '../components/Banner.vue'
 
 export default {
+  name: 'notice',
   components: {
     Banner
   }
