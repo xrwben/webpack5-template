@@ -23,6 +23,11 @@ import Score from '../components/Score.vue'
 export default {
   components: {
     Banner, NavTab, ClassInfo, TeachSchedule, Course, FinalExam, Score
+  },
+  methods: {
+    getData(){
+      //  
+    }
   }
 }
 </script>
