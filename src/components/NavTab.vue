@@ -67,7 +67,7 @@ export default {
           color: #000;
           font-size: 0.3rem;
           font-weight: 800;
-          border-bottom: 0.05rem solid #1890FF;
+          border-bottom: 0.05rem solid #1890ff;
         }
       }
     }

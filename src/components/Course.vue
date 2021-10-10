@@ -140,7 +140,7 @@ export default {
       align-items: center;
       color: #666;
       font-size: 0.24rem;
-       & > i {
+      & > i {
         color: #999;
       }
     }

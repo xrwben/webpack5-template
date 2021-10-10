@@ -34,7 +34,7 @@ export default {
 
 <style lang="less" scoped>
   .home {
-    width: 100%;  
-    background: #F5F7F9;
+    width: 100%;
+    background: #f5f7f9;
   }
 </style>

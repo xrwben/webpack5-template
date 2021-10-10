@@ -59,7 +59,7 @@ export default {
         padding: 0.1rem 0;
         &:not(:last-of-type) {
           border-bottom: 0.02rem solid #f2f2f2;
-        } 
+        }
         .title {
           height: 0.7rem;
           color: #333;

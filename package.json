@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack serve --config build/webpack-config-dev.js",
     "build": "webpack --config build/webpack-config-prod.js",
+    "fix-css": "stylelint ./**/*.{css,less,vue} --config .stylelintrc.js --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "dabenli",
@@ -35,6 +36,8 @@
     "postcss": "^8.3.6",
     "postcss-loader": "^6.1.1",
     "style-loader": "^3.2.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
     "terser-webpack-plugin": "^5.2.4",
     "vue-eslint-parser": "^7.11.0",
     "vue-loader": "^15.9.8",

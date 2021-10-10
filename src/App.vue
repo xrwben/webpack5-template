@@ -16,7 +16,7 @@ export default {
 
 <style lang="less">
   #app {
-    width:100vw;
+    width: 100vw;
     min-height: 100vh;
   }
 </style>

@@ -40,7 +40,7 @@ export default {
   .notice {
     width: 100%;
     min-height: 100vh;
-    background: #F5F7F9;
+    background: #f5f7f9;
     .title {
       width: 6.2rem;
       background: #fff;
