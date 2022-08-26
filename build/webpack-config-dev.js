@@ -20,12 +20,22 @@ module.exports = merge(baseConfig, {
     //   minify: false
     // })
   ],
-  // devtool: 'inline-source-map',
+  devtool: 'inline-source-map',
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'public'),
-    },
+    // static: {
+    //   directory: path.join(__dirname, 'public'),
+    // },
     compress: true,
-    port: 9000
+    // host: '0.0.0.0',
+    port: 9000,
+    allowedHosts: 'all',
+    historyApiFallback: true,
+    // proxy: {
+    //   '/training-portal-area': {
+    //     target: 'http://demo.ntsgw.oa.com/api/sso/',
+    //     secure: false,
+    //     changeOrigin: true
+    //   },
+    // }
   }
 })

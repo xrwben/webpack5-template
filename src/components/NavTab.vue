@@ -46,6 +46,7 @@ export default {
     height: 0.8rem;
     position: relative;
     overflow: auto;
+    scrollbar-width: none;
     .nav-list {
       height: 0.8rem;
       background: #fff;

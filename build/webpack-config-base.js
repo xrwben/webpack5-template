@@ -1,6 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
+
+console.log('当前环境>>>>>', process.env.NODE_ENV, process.env.HOST_ENV)
 
 module.exports = {
   entry: {
@@ -8,8 +11,9 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'static/js/[name].[hash:8].bundle.js',
-    publicPath: '/',
+    filename: 'static/js/[name].[hash:5].bundle.js',
+    // publicPath: '/mobile/',
+    publicPath: process.env.HOST_ENV === 'development' ? '/' : '/mobile/',
     clean: true
   },
   module: {
@@ -45,8 +49,11 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      "process.env.HOST_ENV": JSON.stringify(process.env.HOST_ENV),
+    }),
     new HtmlWebpackPlugin({
-      title: '新员工入职培训',
+      title: '专区',
       template: path.resolve(__dirname, '../index.html'),
       inject: 'body',
       minify: false

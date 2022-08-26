@@ -36,8 +36,16 @@ module.exports = merge(baseConfig, {
         },
       }),
       // js压缩
-      new TerserPlugin()
+      new TerserPlugin({
+        terserOptions: {
+          compress: {
+            drop_console: true,
+            drop_debugger: true
+          }
+        }
+      })
     ],
+    runtimeChunk: 'single',
     // 分割代码
     splitChunks: {
       chunks: 'all',
